@@ -154,7 +154,7 @@ class Breadcrumb_Trail {
 			$separator = ( !empty( $this->args['separator'] ) ? '<' . $child . ' class="sep">' . $this->args['separator'] . '</' . $child . '>' : '' );
 
 			/* Join the individual trail items into a single string. */
-			$breadcrumb .= join( "\n\t\t\t {$separator} ", $this->items );
+			$breadcrumb .= '<li>' . join( "</li>\n\t\t\t {$separator} <li>", $this->items ) . '</li>';
 
 			/* If $after was set, wrap it in a container. */
 			$breadcrumb .= ( !empty( $this->args['after'] ) ? "\n\t\t\t" . ' <' . $child . ' class="trail-after">' . $this->args['after'] . '</' . $child . '>' : '' );

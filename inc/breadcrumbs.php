@@ -144,17 +144,17 @@ class Breadcrumb_Trail {
 				$breadcrumb .= "\n\t\t\t" . '<span class="trail-browse">' . $this->args['labels']['browse'] . '</span> ';
 
 			/* Adds the 'trail-begin' class around first item if there's more than one item. */
-			if ( 1 < count( $this->items ) )
-				array_unshift( $this->items, '<' . $child . ' class="trail-begin">' . array_shift( $this->items ) . '</' . $child . '>' );
+			//if ( 1 < count( $this->items ) )
+				//array_unshift( $this->items, '<' . $child . ' class="trail-begin">' . array_shift( $this->items ) . '</' . $child . '>' );
 
 			/* Adds the 'trail-end' class around last item. */
-			array_push( $this->items, '<' . $child . ' class="trail-end">' . array_pop( $this->items ) . '</' . $child . '>' );
+			//array_push( $this->items, '<' . $child . ' class="trail-end">' . array_pop( $this->items ) . '</' . $child . '>' );
 
 			/* Format the separator. */
-			$separator = ( !empty( $this->args['separator'] ) ? '<' . $child . ' class="sep">' . $this->args['separator'] . '</' . $child . '>' : '' );
-
+			//$separator = ( !empty( $this->args['separator'] ) ? '<' . $child . ' class="sep">' . $this->args['separator'] . '</' . $child . '>' : '' );
+			
 			/* Join the individual trail items into a single string. */
-			$breadcrumb .= '<li>' . join( "</li>\n\t\t\t {$separator} <li>", $this->items ) . '</li>';
+			$breadcrumb .= '<' . $child . '>' . join( "</" . $child . ">\n\t\t\t<" . $child . ">", $this->items ) . '</' . $child . '>';
 
 			/* If $after was set, wrap it in a container. */
 			$breadcrumb .= ( !empty( $this->args['after'] ) ? "\n\t\t\t" . ' <' . $child . ' class="trail-after">' . $this->args['after'] . '</' . $child . '>' : '' );

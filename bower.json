@@ -1,0 +1,28 @@
+{
+  "name": "breadcrumb-trail",
+  "version": "1.0.0",
+  "authors": [
+    "Soham Banerjee <soham2008xyz@gmail.com>"
+  ],
+  "description": "Bootstrap-compatible breadcrumbs for WordPress",
+  "main": "breadcrumb-trail.php",
+  "keywords": [
+    "php",
+    "bootstrap",
+    "wordpress"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/soham2008xyz/breadcrumb-trail",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+	"readme.txt",
+	"license.txt",
+	"readme.md",
+	"*.png",
+	"*.jpg"
+  ]
+}
